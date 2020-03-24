@@ -1,3 +1,8 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+
 .installed.cfg
 bin
 develop-eggs
@@ -9,4 +14,4 @@ src/*.egg-info
 lib
 lib64
 .idea/*
-__pycache__/
+
