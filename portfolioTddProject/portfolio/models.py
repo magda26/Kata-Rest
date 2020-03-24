@@ -8,7 +8,6 @@ class Image(models.Model):
     url = models.CharField(max_length=1000)
     description = models.CharField(max_length=1000, null=True)
     type = models.CharField(max_length=5, blank=True)
-    user = models.ForeignKey(User, null=True, on_delete=models.PROTECT)
 
 
 class UserP(models.Model):
@@ -19,8 +18,6 @@ class UserP(models.Model):
 
 class Portfolio(models.Model):
     name = models.CharField(max_length=200)
-    url = models.CharField(max_length=1000)
     description = models.CharField(max_length=1000, null=True)
-    type = models.CharField(max_length=5, blank=True)
     image = models.ForeignKey(Image, null=True, on_delete=models.PROTECT)
-    user = models.ForeignKey(User, null=True, on_delete=models.PROTECT)
+    user = models.ForeignKey(UserP, null=True, on_delete=models.PROTECT)
